@@ -12,12 +12,11 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 18
-      - name: Install dependencies
-        run: npm ci
-        working-directory: ./physical-ai-textbook
-      - name: Build website
-        run: npm run build
-        working-directory: ./physical-ai-textbook
+      - name: Install and Build
+        run: |
+          cd physical-ai-textbook
+          npm ci
+          npm run build
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
