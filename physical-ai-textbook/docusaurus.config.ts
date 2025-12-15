@@ -8,6 +8,7 @@ module.exports = {
   baseUrl: '/pyhsical-ai-books/',
   organizationName: 'usama6513',
   projectName: 'pyhsical-ai-books',
+  trailingSlash: false,
   onBrokenLinks: 'warn',
   
   presets: [
